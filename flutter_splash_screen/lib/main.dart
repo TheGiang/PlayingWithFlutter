@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_splash_screen/home.dart';
+import 'package:flutter_splash_screen/route_controller.dart';
+import 'package:flutter_splash_screen/splash_screen.dart';
 
 void main() => runApp(new MyApp());
 
@@ -9,10 +10,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'Flutter Demo',
+      onGenerateRoute: initialSlideRoutes,
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new HomeScreen(title: 'Flutter Demo Home Page'),
+      home: new SplashScreen(),
     );
   }
 }
