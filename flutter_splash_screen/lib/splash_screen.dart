@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_splash_screen/Constants.dart';
 import 'package:flutter_splash_screen/presenter/splash_screen_presenter.dart';
@@ -17,9 +15,7 @@ class _SplashScreenState extends State<SplashScreen> implements SplashContract {
     super.initState();
     _presenter = SplashPresenter(this);
 
-    Timer(Duration(milliseconds: 200), () {
-      _presenter.fetchSomething();
-    });
+    _presenter.fetchSomething();
   }
 
   @override

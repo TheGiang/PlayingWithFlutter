@@ -21,7 +21,6 @@ class SplashPresenter extends BasePresenter<SplashContract> {
     await new Future.delayed(const Duration(seconds: 2));
 
     if (_isHaveData.isEmpty) {
-      await prefs.setString(Constants.sp_have_data, "just login");
       view.goToNextScreen(true);
     } else {
       view.goToNextScreen(false);
